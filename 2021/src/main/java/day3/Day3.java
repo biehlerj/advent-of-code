@@ -6,8 +6,8 @@ import java.util.List;
 
 public class Day3 {
     public int powerConsumption() {
-        String gamma = "";
-        String epsilon = "";
+        StringBuilder epsilonStringBuilder = new StringBuilder();
+        StringBuilder gammaStringBuilder = new StringBuilder();
         List<String> powerBinary = new InputReader().inputStrToArray("/day3.txt");
 
         for (int i = 0; i < powerBinary.get(0).length(); i++) {
@@ -17,11 +17,11 @@ public class Day3 {
                 if (s.charAt(i) == '0') zeroes++;
                 else ones++;
             }
-            gamma += (ones > zeroes ? "1" : "0");
-            epsilon += (ones < zeroes ? "1" : 0);
+            gammaStringBuilder.append(ones > zeroes ? "1" : "0");
+            epsilonStringBuilder.append(ones < zeroes ? "1" : 0);
         }
 
-        return Integer.parseInt(gamma, 2) * Integer.parseInt(epsilon, 2);
+        return Integer.parseInt(gammaStringBuilder.toString(), 2) * Integer.parseInt(epsilonStringBuilder.toString(), 2);
     }
 
     public int lifeSupportRating() {
