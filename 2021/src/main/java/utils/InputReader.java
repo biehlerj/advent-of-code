@@ -9,7 +9,7 @@ public class InputReader {
     public String path = new File("src/main/resources/inputs/").getAbsolutePath();
 
     public List<Integer> inputNumsToArray(String filename) {
-        ArrayList<Integer> intArray = new ArrayList<Integer>();
+        ArrayList<Integer> intArray = new ArrayList<>();
 
         try {
             BufferedReader inputReader = new BufferedReader(new FileReader(path + filename));
@@ -20,12 +20,29 @@ public class InputReader {
                 intArray.add(Integer.parseInt(line));
                 line = inputReader.readLine();
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         return intArray;
+    }
+
+    public List<String> inputStrToArray(String filename) {
+        ArrayList<String> strArray = new ArrayList<>();
+
+        try {
+            BufferedReader inputReader = new BufferedReader(new FileReader(path + filename));
+
+            String line = inputReader.readLine();
+
+            while (line != null) {
+                strArray.add(line);
+                line = inputReader.readLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return strArray;
     }
 }
