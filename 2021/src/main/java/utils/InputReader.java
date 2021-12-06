@@ -45,4 +45,22 @@ public class InputReader {
 
         return strArray;
     }
+
+    public List<Integer> inputIntsToArray(String filename) {
+        ArrayList<Integer> intArray = new ArrayList<>();
+
+        try {
+            BufferedReader inputReader = new BufferedReader(new FileReader(path + filename));
+            String line = inputReader.readLine();
+            String[] intsAsStr = line.split(",");
+
+            for (String num : intsAsStr) {
+                intArray.add(Integer.parseInt(num));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return intArray;
+    }
 }
