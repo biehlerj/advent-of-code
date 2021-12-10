@@ -8,7 +8,7 @@ public class Day2 {
     public int subMovement() {
         int depth = 0;
         int horizontal = 0;
-        List<String> movements = new InputReader().inputStrToArray("/day2.txt");
+        List<String> movements = new InputReader().inputToList("/day2.txt");
 
         for (String movement : movements) {
             String[] splitMovement = movement.trim().split("\\s+");
@@ -31,7 +31,7 @@ public class Day2 {
         int depth = 0;
         int horizontal = 0;
         int aim = 0;
-        List<String> movements = new InputReader().inputStrToArray("/day2.txt");
+        List<String> movements = new InputReader().inputToList("/day2.txt");
 
         for (String movement : movements) {
             String[] splitMovement = movement.trim().split("\\s+");

@@ -12,7 +12,7 @@ public class Day5 {
     public int dangerZone() {
         int[][] vents = new int[1000][1000];
         int x1, x2, y1, y2;
-        List<String> inputs = new InputReader().inputStrToArray(path);
+        List<String> inputs = new InputReader().inputToList(path);
 
         for (String input : inputs) {
             String[] xy1 = input.substring(0, input.indexOf(" ")).split(",");
@@ -48,7 +48,7 @@ public class Day5 {
     public int dangerZoneDiagonals() {
         int [][] vents = new int[1000][1000];
         int x1, x2, y1, y2;
-        List<String> inputs = new InputReader().inputStrToArray(path);
+        List<String> inputs = new InputReader().inputToList(path);
 
         for (String input : inputs) {
             String[] xy1 = input.substring(0, input.indexOf(" ")).split(",");

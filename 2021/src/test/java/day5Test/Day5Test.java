@@ -15,7 +15,7 @@ public class Day5Test {
     @Test
     public void testPart2() {
         int result = new Day5().dangerZoneDiagonals();
-        System.out.println(result);
-//        Assert.assertEquals(0, result);
+
+        Assert.assertEquals(19939, result);
     }
 }

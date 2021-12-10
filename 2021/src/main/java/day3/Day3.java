@@ -8,7 +8,7 @@ public class Day3 {
     public int powerConsumption() {
         StringBuilder epsilonStringBuilder = new StringBuilder();
         StringBuilder gammaStringBuilder = new StringBuilder();
-        List<String> powerBinary = new InputReader().inputStrToArray("/day3.txt");
+        List<String> powerBinary = new InputReader().inputToList("/day3.txt");
 
         for (int i = 0; i < powerBinary.get(0).length(); i++) {
             int zeroes = 0;
@@ -25,8 +25,8 @@ public class Day3 {
     }
 
     public int lifeSupportRating() {
-        List<String> co2 = new InputReader().inputStrToArray("/day3.txt");
-        List<String> oxygen = new InputReader().inputStrToArray("/day3.txt");
+        List<String> co2 = new InputReader().inputToList("/day3.txt");
+        List<String> oxygen = new InputReader().inputToList("/day3.txt");
 
         int i = 0;
         while (oxygen.size() > 1) {

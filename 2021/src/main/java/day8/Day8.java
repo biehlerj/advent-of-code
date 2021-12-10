@@ -5,7 +5,7 @@ import utils.InputReader;
 import java.util.List;
 
 public class Day8 {
-    List<String> displayStrings = new InputReader().inputStrToArray("/day8.txt");
+    List<String> displayStrings = new InputReader().inputToList("/day8.txt");
 
     public int oneFourSevenEightTotal() {
         int total = 0;
