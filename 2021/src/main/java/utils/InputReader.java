@@ -48,4 +48,25 @@ public class InputReader {
 
         return intArray;
     }
+
+    public int[][] inputToDoubleArray(String filename, int size1, int size2) {
+        int[][] input2DArr = new int[size1][size2];
+
+        try {
+            Scanner inputScanner = new Scanner(new File(path + filename));
+            int i = 0;
+
+            while (inputScanner.hasNext()) {
+                String line = inputScanner.nextLine();
+                for (int j = 0; j < line.length(); j++) {
+                    input2DArr[i][j] = Integer.parseInt(line.substring(j, j + 1));
+                }
+                i++;
+            }
+            inputScanner.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return input2DArr;
+    }
 }
