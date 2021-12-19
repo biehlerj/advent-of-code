@@ -69,4 +69,25 @@ public class InputReader {
         }
         return input2DArr;
     }
+
+    public int[][] inputTo2DArr(String filename) {
+        int[][] input2DArr;
+
+        try {
+            Scanner inputReader = new Scanner(new File(path + filename));
+            List<String> input = new ArrayList<>();
+
+            while (inputReader.hasNext()) input.add(inputReader.nextLine());
+            inputReader.close();
+            input2DArr = new int[input.size()][input.get(0).length()];
+
+            for (int i = 0; i < input2DArr.length; i++)
+                for (int j = 0; j < input2DArr[0].length; j++)
+                    input2DArr[i][j] = Integer.parseInt(input.get(i).substring(j, j + 1));
+            return input2DArr;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
